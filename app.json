@@ -1,0 +1,61 @@
+{
+  "expo": {
+    "name": "International HealthCare Center",
+    "slug": "international-healthcare-center",
+    "version": "1.0.1",
+    "orientation": "portrait",
+    "icon": "./assets/images/favlogo.png",
+    "scheme": "myapp",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "statusBar": {
+        "style": "dark"
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/favlogo.png",
+        "backgroundColor": "#28A0D7"
+      },
+      "package": "com.care_7ata.internationalhealthcarecenter",
+      "statusBar": {
+        "backgroundColor": "#28A0D7",
+        "barStyle": "light-content"
+      }
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/images/favlogo.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/splash-logo.png",
+          "resizeMode": "contain",
+          "backgroundColor": "#28A0D7",
+          "dark": {
+            "image": "./assets/images/splash-logo.png",
+            "backgroundColor": "#28A0D7",
+            "resizeMode": "contain"
+          }
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "eebf8bc2-73ae-4326-9333-c682ba2420cf"
+      }
+    }
+  }
+}

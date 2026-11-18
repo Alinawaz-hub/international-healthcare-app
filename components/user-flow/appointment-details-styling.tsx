@@ -1,0 +1,457 @@
+import { Colors } from "@/constants/Colors";
+import { StyleSheet, Dimensions } from "react-native";
+
+const screenWidth = Dimensions.get("window").width;
+const { width } = Dimensions.get("window");
+
+const appointmentDetailsStyles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: "#FFF",
+    paddingHorizontal: 15,
+  },
+  disabledButton: {
+    backgroundColor: "#B0B0B0",
+    opacity: 0.6,
+    borderColor: "#E0E0E0",
+    borderWidth: 1,
+  },
+  scrollContainer: {
+    paddingBottom: 50,
+  },
+  headerContainer: {
+    marginTop: 20,
+  },
+  heading: {
+    fontSize: 24,
+    fontWeight: "700",
+    color: "#000",
+    width: 200,
+    marginBottom: 20,
+    fontFamily: "Raleway-Bold",
+  },
+  heading3: {
+    fontSize: 20,
+    fontWeight: "700",
+    color: "#000",
+    width: 200,
+    marginBottom: 0,
+    fontFamily: "Raleway-Bold",
+  },
+  heading1: {
+    fontSize: 20,
+    fontWeight: "700",
+    color: "#000",
+    marginTop: 10,
+    fontFamily: "Raleway-Bold",
+  },
+  description: {
+    fontSize: 16,
+    color: "gray",
+    marginBottom: 15,
+    width: 270,
+  },
+  tabsContainer: {
+    flexDirection: "row",
+    paddingBottom: 20,
+  },
+  tab: {
+    paddingVertical: 12,
+    paddingHorizontal: 15,
+    borderRadius: 80,
+    minWidth: screenWidth * 0.3,
+    alignItems: "center",
+    justifyContent: "center",
+    marginHorizontal: 5,
+    height: 45,
+  },
+  tab1: {
+    paddingVertical: 12,
+    paddingHorizontal: 15,
+    borderRadius: 8,
+    minWidth: screenWidth * 0.3,
+    alignItems: "center",
+    justifyContent: "center",
+    marginHorizontal: 5,
+    height: 45,
+  },
+  activeTab: {
+    backgroundColor: Colors.primary,
+  },
+  inactiveTab: {
+    backgroundColor: "#F5F5F5",
+  },
+  tabText: {
+    fontSize: 14,
+    fontWeight: "bold",
+    textAlign: "center",
+    lineHeight: 20,
+  },
+  activeTabText: {
+    color: "#FFF",
+  },
+  infoContainer: {
+    marginBottom: 20,
+    gap: 8,
+  },
+  infoLabel: {
+    fontSize: 16,
+    fontWeight: "600",
+    color: "#b5b3b3",
+  },
+  infoText: {
+    fontWeight: "400",
+    color: "#666",
+    fontSize: 16,
+    marginTop: -8,
+    marginBottom: 2,
+  },
+  infoText1: {
+    fontWeight: "400",
+    color: "#666",
+    fontSize: 16,
+  },
+  rememberContainer: {
+    flexDirection: "row",
+    alignItems: "center",
+  },
+  rememberText: {
+    fontSize: 14,
+    color: "#767E8C",
+    top: 14,
+    width: 270,
+    fontWeight: "400",
+  },
+  checkbox: {
+    width: 20,
+    height: 20,
+    borderRadius: 4,
+    borderWidth: 2,
+    borderColor: "#767E8C",
+    justifyContent: "center",
+    alignItems: "center",
+    marginRight: 15,
+  },
+  checked: {
+    backgroundColor: "#00EF99",
+    borderColor: "#00EF99",
+  },
+  checkmark: {
+    color: "#FFF",
+    fontWeight: "bold",
+    fontSize: 14,
+  },
+  buttonContainer: {
+    width: "100%",
+    alignItems: "center",
+    marginTop: 20,
+    paddingBottom: 20,
+  },
+  continueButton: {
+    width: "100%",
+    height: 48,
+    backgroundColor: Colors.primary,
+    marginBottom: 10,
+  },
+  cancelButton: {
+    backgroundColor: "white",
+    borderWidth: 1,
+    borderColor: "#A8A8A8",
+    width: 350,
+    height: 48,
+    marginTop: 10,
+  },
+  medicalInfoContainer: {
+    marginBottom: 20,
+    gap: 8,
+  },
+  conditionContainer: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    marginBottom: 15,
+    marginRight: 40,
+    top: 10,
+  },
+  descriptionText: {
+    fontSize: 14,
+    color: "#666",
+    marginTop: 5,
+    marginBottom: 10,
+    lineHeight: 20,
+  },
+  patientInfoContainer: {
+    marginBottom: 20,
+    gap: 8,
+  },
+  pdfContainer: {
+    marginTop: 10,
+    alignItems: "flex-start",
+  },
+  pdfLabel: {
+    fontSize: 16,
+    fontWeight: "600",
+    color: "#b5b3b3",
+  },
+  pdfButton: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginTop: 5,
+    padding: 10,
+
+    borderRadius: 8,
+  },
+  pdfImage: {
+    width: 40,
+    height: 40,
+    resizeMode: "contain",
+    marginRight: 10,
+  },
+  pdfText: {
+    fontSize: 16,
+    fontWeight: "bold",
+    color: "#333",
+  },
+  pdfText1: {
+    fontSize: 12,
+    fontWeight: "bold",
+    color: "#b5b3b3",
+  },
+  doctorCard: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginBottom: 20,
+  },
+  doctorImage: {
+    width: 80,
+    height: 80,
+    borderRadius: 80,
+    marginRight: 15,
+  },
+  specialistText: {
+    fontSize: 14,
+    color: "#9E9E9E",
+  },
+  doctorName: {
+    fontSize: 22,
+    fontWeight: "700",
+    color: "#000",
+    fontFamily: "Raleway-Bold",
+  },
+  sectionTitle: {
+    fontSize: 18,
+    fontWeight: "700",
+    color: "#000",
+    marginTop: 15,
+    fontFamily: "Raleway-Bold",
+  },
+  sectionTitle1: {
+    fontSize: 14,
+    color: "#525252",
+    marginTop: 5,
+    top: 10,
+  },
+  detailText: {
+    fontSize: 16,
+    color: "#525252",
+    marginTop: 5,
+  },
+  boldText: {
+    fontWeight: "700",
+    color: "#9E9E9E",
+  },
+  specialInterestTitle: {
+    fontSize: 16,
+    fontWeight: "700",
+    color: "gray",
+    marginTop: 20,
+  },
+  specialInterestText: {
+    fontSize: 16,
+    color: "gray",
+    top: -5,
+  },
+  innerTabsWrapper: {
+    width: "100%",
+  },
+  innerTabsContainer: {
+    flexDirection: "row",
+    alignItems: "center",
+    paddingHorizontal: 10,
+  },
+  innerTab: {
+    paddingVertical: 12,
+    paddingHorizontal: 20,
+    borderBottomWidth: 2,
+    borderBottomColor: "transparent",
+    borderRadius: 20,
+    marginRight: 15,
+  },
+  activeInnerTab: {
+    borderBottomColor: Colors.primary,
+  },
+  innerTabText: {
+    fontSize: 16,
+    fontWeight: "600",
+    color: "#666",
+    textAlign: "center",
+  },
+  timeSlotContainer: {
+    width: 102,
+    height: 42,
+    backgroundColor: "#FFF",
+    borderRadius: 8,
+    alignItems: "center",
+    justifyContent: "center",
+    borderWidth: 1,
+    borderColor: Colors.primary,
+  },
+  timeSlotText: {
+    fontSize: 14,
+    color: "#000",
+  },
+  selectedTimeSlot: {
+    backgroundColor: Colors.primary,
+    borderColor: Colors.primary,
+  },
+  selectedTimeText: {
+    color: "#FFF",
+  },
+  heading2: { fontSize: 20, fontWeight: "bold", marginBottom: 10 },
+  cardContainer: {
+    width: "100%",
+    alignItems: "center",
+  },
+  card: {
+    backgroundColor: "#fafafa",
+    padding: width * 0.04,
+    borderRadius: 20,
+    marginVertical: width * 0.02,
+    shadowColor: "White",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.15,
+    shadowRadius: 5,
+    elevation: 5,
+    width: "97%",
+  },
+
+  headerRow: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    marginTop: 20,
+  },
+  leftBadges: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 0,
+  },
+  idBadge: {
+    backgroundColor: Colors.primary,
+    padding: 5,
+    borderRadius: 80,
+    width: 95,
+    height: 30,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  idText: { color: "white" },
+  inPersonBadge: {
+    flexDirection: "row",
+    backgroundColor: "#CCCCCC",
+    width: 90,
+    height: 30,
+    alignItems: "center",
+    padding: 5,
+    borderRadius: 80,
+  },
+  icon: {
+    width: 16,
+    height: 17,
+    marginRight: 10,
+    resizeMode: "contain",
+    alignSelf: "center",
+  },
+  inPersonText: { color: "black" },
+  paidBadge: {
+    backgroundColor: "#CCCCCC",
+    width: 100,
+    height: 30,
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: 80,
+    alignSelf: "flex-end",
+  },
+  paidText: { color: "black" },
+  infoContainer1: {
+    backgroundColor: "#EBEBEB",
+    padding: 10,
+    borderRadius: 8,
+    marginTop: 8,
+  },
+  row: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    marginBottom: 5,
+  },
+  label: {
+    fontSize: 14,
+    color: "#525252",
+  },
+  rightAlign: {
+    textAlign: "center",
+    flex: 1,
+    left: 60,
+  },
+  nameContainer: {
+    flexDirection: "row",
+    alignItems: "center",
+  },
+  therapistContainer: {
+    flexDirection: "row",
+    alignItems: "center",
+  },
+  boldText1: {
+    fontWeight: "bold",
+  },
+  profileIcon: {
+    width: 32,
+    height: 32,
+    marginRight: 5,
+    borderRadius: 16,
+  },
+  detailsContainer: {
+    backgroundColor: "#fafafa",
+    padding: 20,
+    borderRadius: 5,
+    gap: 8,
+  },
+  iconText: {
+    flexDirection: "row",
+    alignItems: "center",
+  },
+  iconText1: {
+    flexDirection: "row",
+    alignItems: "center",
+    right: 50,
+  },
+  iconText2: {
+    flexDirection: "row",
+    alignItems: "center",
+    right: 57,
+  },
+  GenerateButton: {
+    backgroundColor: "white",
+    borderWidth: 1,
+    borderColor: "#E0E0E0",
+    width: "100%",
+  },
+  validationText: {
+    color: "#E53935",
+    fontSize: 14,
+    top: -80,
+    textAlign: "center",
+  },
+});
+
+export default appointmentDetailsStyles;

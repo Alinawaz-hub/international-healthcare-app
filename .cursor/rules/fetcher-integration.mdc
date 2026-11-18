@@ -1,0 +1,15 @@
+# Fetcher Integration Rule
+
+When asked to integrate a file using the Fetcher component, follow these steps:
+
+1. **Add Query Key**: In [`query.keys.ts`](mdc:lib/query/query.keys.ts), define a new query key using `defineQuery`, specifying the API path and the expected response type.
+2. **Export Query Key**: Ensure the new query key is exported and included in the `QUERY_KEYS` object in [`index.tsx`](mdc:lib/query/index.tsx).
+3. **Use Fetcher Component**: In the target file, import and use the `Fetcher` component from [`fetcher.tsx`](mdc:components/fetcher.tsx), passing the correct key, params, and handlers for loading, error, and success states.
+4. **Type Safety**: Use the types and utilities from [`query.utils.tsx`](mdc:lib/query/query.utils.tsx) to ensure type safety for params and response data.
+5. **Minimal Input**: If only the API path and response are provided, infer the types and structure as needed, and wire up the Fetcher for data fetching and rendering.
+
+This rule ensures consistent, type-safe integration of API data using the Fetcher pattern across the codebase.
+description:
+globs:
+alwaysApply: false
+---
